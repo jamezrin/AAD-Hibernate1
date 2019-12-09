@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 9, 2019 10:47:03 AM by Hibernate Tools 5.2.12.Final -->
+<hibernate-mapping default-lazy="false">
+ <class catalog="seguros" name="ejercicioshbm.ej3_1.Seguro" table="seguro">
+  <id name="idSeguro" type="java.lang.Integer">
+   <column name="idSeguro"/>
+   <generator class="identity"/>
+  </id>
+  <property generated="never" lazy="false" name="nif" type="string">
+   <column name="nif" not-null="true" unique="true"/>
+  </property>
+  <property generated="never" lazy="false" name="nombre" type="string">
+   <column name="nombre"/>
+  </property>
+  <property generated="never" lazy="false" name="ape1" type="string">
+   <column name="ape1"/>
+  </property>
+  <property generated="never" lazy="false" name="ape2" type="string">
+   <column name="ape2"/>
+  </property>
+  <property generated="never" lazy="false" name="edad" type="java.lang.Integer">
+   <column name="edad"/>
+  </property>
+  <property generated="never" lazy="false" name="sexo" type="java.lang.Integer">
+   <column name="sexo"/>
+  </property>
+  <property generated="never" lazy="false" name="casado" type="java.lang.Character">
+   <column length="1" name="casado"/>
+  </property>
+  <property generated="never" lazy="false" name="numHijos" type="java.lang.Integer">
+   <column name="numHijos"/>
+  </property>
+  <property generated="never" lazy="false" name="fechaCreacion" type="timestamp">
+   <column length="19" name="fechaCreacion"/>
+  </property>
+  <property generated="never" lazy="false" name="tipoSeguro" type="string">
+   <column name="tipoSeguro"/>
+  </property>
+  <property generated="never" lazy="false" name="mayorEdad" type="boolean" formula="edad >= 18"></property>
+ </class>
+</hibernate-mapping>
